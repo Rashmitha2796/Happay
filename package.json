@@ -1,6 +1,7 @@
 {
   "name": "happay-task",
   "version": "0.1.0",
+  "homepage": "http://rashmitha2796.github.io/Happay-Project",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.5",
@@ -8,6 +9,7 @@
     "@testing-library/user-event": "^12.1.10",
     "chai": "^4.2.0",
     "chai-jquery": "^2.1.0",
+    "gh-pages": "^3.2.3",
     "jquery": "^3.5.1",
     "jsdom": "^16.4.0",
     "mocha": "^8.2.1",
@@ -19,6 +21,9 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "mocha --require ./test/test_helper.js --recursive ./test",
